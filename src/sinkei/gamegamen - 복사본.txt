@@ -1,0 +1,102 @@
+package sinkei;
+
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.*;
+
+
+public class gamegamen extends JFrame implements MouseListener {
+	
+	ImageIcon[] Cardimage = new ImageIcon[10];
+	JLabel[] Cardlist = new JLabel[Cardimage.length*2];
+	JLabel[] Charlist = new JLabel[2];
+	String[] Imagelist = { "./images/koishi.png", "./images/nue.png", 
+			"./images/rumia.png", "./images/suwako.png", "./images/yuyuko.png", "./images/nitori.png", "./images/momiji.png",
+			"./images/sakuya.png", "./images/inaba.png", "./images/crownpeace.png"};
+	
+	
+	public gamegamen() {
+		
+		
+		JPanel p = new JPanel();
+		
+		add(p);
+	
+		for(int j=0; j<Cardimage.length; j++) {
+			Cardimage[j] = new ImageIcon(Imagelist[j]);
+			Cardlist[j] = new JLabel(Cardimage[j]);
+			Cardlist[j+Cardimage.length] = new JLabel(Cardimage[j]);
+			
+		}
+		
+		Charlist[0] = new JLabel(new ImageIcon("./images/remilia.png"));
+		Charlist[1] = new JLabel(new ImageIcon("./images/flandre.png"));
+		
+		p.setBounds(0, 0, 1024, 768);
+		p.setLayout(null);
+		
+		p.add(Charlist[0]);
+		p.add(Charlist[1]);
+			
+		for(int i=0; i<Cardlist.length; i++) {
+			p.add(Cardlist[i]);
+		}
+		
+		Charlist[0].setBounds(50, 200, 128, 198);
+		Charlist[1].setBounds(830, 200, 128, 198);
+		
+		for(int k=0; k<5; k++){
+			Cardlist[k].setBounds(260+(k*100), 200, 84, 108);
+		}
+		
+		setTitle("神経衰弱");
+		setLocation(300,200);
+		setPreferredSize(new Dimension(1024,768));
+		setVisible(true);
+		pack();
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		new gamegamen();
+		
+	}
+	
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+	
+		
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
