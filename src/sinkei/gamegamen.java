@@ -134,6 +134,7 @@ public class gamegamen extends JFrame implements ActionListener {
 				Cardlist[intcheck].setEnabled(false);
 				Cardlist[i].setEnabled(false);
 				System.out.println("같은그림");
+				System.out.println("깃허브");
 				
 				confirm[0] = confirm[1] = null;
 					}
